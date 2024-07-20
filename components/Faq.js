@@ -2,7 +2,7 @@
 "use client";
 import React, { useEffect } from 'react';
 import styles from '../styles/Faq.module.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min';
+
 
 const Faq = () => {
   // Handle responsive styles
