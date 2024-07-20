@@ -1,0 +1,126 @@
+/* styles/Testimonials.module.css */
+
+.testimonialSection {
+    text-align: center;
+    padding: 2cm 5cm;
+    background-image: url(https://angular.envytheme.com/tanus/assets/images/bg-images/bg-image5.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    border: 1px solid rgb(34, 2, 34);
+    border-radius: 15px;
+    margin: 2cm 1.5cm;
+    color: white;
+    background-color: rgb(30, 25, 37);
+}
+
+.testimonialTitle {
+    color: white;
+    text-align: center;
+    margin-left: 0.2cm;
+}
+
+.testimonialTitle .testimonialHighlight {
+    color: blueviolet;
+}
+
+.testimonialRating {
+    color: white;
+    margin-bottom: 40px;
+}
+
+.testimonialRating span {
+    color: #6e1eb8;
+    font-weight: bold;
+}
+
+.testimonials {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.testimonial {
+    background-color: #17022e;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    text-align: left;
+    color: white;
+    margin: 10px;
+}
+
+.testimonialHeader {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.testimonialHeader img {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+}
+
+.testimonialHeader h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.testimonialHeader p {
+    margin: 0;
+    color: #9b9b9b;
+}
+
+.testimonial p {
+    margin: 20px 0;
+    font-size: 16px;
+}
+
+.rating {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rating span {
+    color: #ffd700;
+    font-size: 18px;
+}
+
+.rating p {
+    margin: 0;
+    color: #9b9b9b;
+    font-size: 14px;
+}
+
+/* Responsive Styles */
+
+@media (max-width: 768px) {
+    .testimonialSection {
+        padding: 2cm 2cm;
+    }
+
+    .testimonial {
+        width: 90%;
+    }
+}
+
+@media (max-width: 576px) {
+    .testimonialSection {
+        padding: 2cm 0cm;
+        width: 8cm;
+        margin-left: 1cm;
+    }
+
+    .testimonial {
+        width: 100%;
+    }
+
+    .testimonialTitle {
+        margin-left: 0.5cm;
+        text-align: center;
+        margin-right: -0.5cm;
+    }
+}

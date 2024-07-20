@@ -1,0 +1,143 @@
+/* styles/Faq.module.css */
+.row2 {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 4rem;
+    color: white;
+  }
+  
+  .col {
+    flex: 1 1 50%;
+  }
+  
+  .navLink{
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    background-color: rgb(91, 20, 206);
+    margin-top: 10px;
+  }
+
+  .navLink:hover{
+    background-color: white;
+    color: #17022e;
+  }
+
+  .textContent {
+    text-align: left;
+  }
+  
+  .imageContent img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  .accordion1 {
+    padding: 5rem 6rem;
+    color: white;
+    align-items: center;
+    
+  }
+  
+  .accordion1 h1{
+    flex-wrap: wrap;
+    margin-bottom: 2cm;
+    align-items: center;
+  }
+  
+  .accordion-button {
+    padding: 0.6cm 0.5cm;
+    font-size: large;
+    
+  }
+  
+  .accordion-body {
+    padding: 0.5cm 0.5cm;
+  }
+  
+  @media (max-width: 992px) {
+    .row2 {
+      padding: 2rem 2rem;
+    }
+  
+    .textContent {
+      text-align: left;
+    }
+  
+    .imageContent img {
+      max-width: 90%;
+    }
+  
+    .accordion1 {
+      padding: 2rem 3rem;
+    }
+  
+    
+  }
+  
+  @media (max-width: 768px) {
+    .row2 {
+      padding: 1.5rem 1rem;
+    }
+  
+    .textContent {
+      text-align: center;
+    }
+  
+    .imageContent img {
+      max-width: 80%;
+    }
+  
+    .accordion1 {
+      padding: 2rem 2rem;
+    }
+  
+    
+  
+    .accordion-button {
+      padding: 0.5cm 0.4cm;
+      font-size: 14px;
+    }
+  
+    .accordion-body {
+      padding: 0.4cm 0.4cm;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .row2 {
+      padding: 1cm 0.5cm;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .textContent {
+      text-align: center;
+    }
+  
+    .imageContent img {
+      max-width: 70%;
+    }
+  
+    .accordion1 {
+      padding: 1cm 1cm;
+    }
+  
+    
+  
+    .accordion-button {
+      padding: 0.4cm 0.3cm;
+      font-size: 12px;
+    }
+  
+    .accordion-body {
+      padding: 0.3cm 0.3cm;
+    }
+  }
+  

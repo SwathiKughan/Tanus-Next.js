@@ -1,0 +1,71 @@
+.features {
+  text-align: center;
+  color: white;
+  padding-top: 3cm;
+  background-color: rgb(30, 25, 37);
+}
+
+.row1 {
+  padding: 2cm 5cm;
+  text-align: left;
+  display: flex;
+  flex-wrap: wrap;
+  margin: -0.5cm; /* Half the gap to compensate for child padding */
+}
+
+.colGap {
+  padding: 0.5cm; /* Half the gap on all sides */
+}
+
+.singleFeaturesBox {
+  border: 1px solid #ddd;
+  padding: 1cm;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(154, 15, 235, 0.1);
+  background-color: black;
+  height: 12cm;
+  width: 15cm;
+}
+
+.singleFeaturesBox p {
+  color: grey;
+}
+
+.singleFeaturesBox img {
+  width: 100%; /* Make images responsive */
+  height: 7cm; /* Maintain aspect ratio */
+}
+
+.singleFeaturesBox h3 {
+  color: white; /* Customize text color if needed */
+}
+
+/* Media queries for smaller screens */
+@media (max-width: 1024px) {
+  .row1 {
+      padding: 2rem; /* Adjust padding for smaller screens */
+  }
+
+  .singleFeaturesBox {
+      width: 100%; /* Full width on smaller screens */
+      margin: 1rem 0; /* Adjust margin for spacing */
+  }
+}
+
+@media (max-width: 576px) {
+  .featureText {
+      text-align: center;
+  }
+
+  .singleFeaturesBox {
+      height: 11cm;
+      width: 9cm;
+      margin-left: -0.5cm;
+  }
+
+  .singleFeaturesBox img {
+      width: 6cm;
+      height: 5cm;
+      margin-left: 1cm;
+  }
+}

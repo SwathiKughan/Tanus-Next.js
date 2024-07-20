@@ -1,0 +1,118 @@
+/* Benefits.module.css */
+.benefits {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.colLg6 {
+    flex: 1;
+    min-width: 300px; /* Adjust based on your design needs */
+}
+
+.colMd12 {
+    flex: 1;
+}
+
+.benefitsContent {
+    color: white;
+    padding: 2rem;
+    background-color: rgb(30, 25, 37);
+    margin-right: 1rem; /* Add margin to create space between the content and the list */
+}
+
+.subTitle {
+    color: rgb(101, 18, 139);
+    font-weight: bold;
+}
+
+.fwNormal {
+    color: white;
+    padding-left: 1rem;
+}
+
+.defaultButton {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    background-color: rgb(91, 20, 206);
+    margin-top: 10px;
+}
+
+.defaultButton:hover {
+    background-color: white;
+    color: #17022e;
+}
+
+.benefitsList {
+    background-color: rgb(30, 25, 37);
+    padding: 2rem; /* Add padding for better spacing */
+}
+
+.benefitsList .item {
+    margin-bottom: 20px;
+}
+
+.icon img {
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid white;
+    padding: 0.4rem;
+    background-color: #000000;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.benefitsList h3 {
+    color: white;
+}
+
+.benefitsList p {
+    color: gray;
+}
+
+.image img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Media queries for smaller screens */
+@media (max-width: 1024px) {
+    .benefitsContent {
+        padding: 1rem;
+    }
+
+    .icon img {
+        width: 2rem;
+        height: 2rem;
+        padding: 0.3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .benefitsContent {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .benefitsContent img {
+        width: 4cm;
+        height: 5cm;
+        margin-left: 1cm;
+    }
+    .benefitsContent {
+        padding: 0.5rem;
+    }
+}

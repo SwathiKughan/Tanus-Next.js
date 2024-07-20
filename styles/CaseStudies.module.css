@@ -1,0 +1,244 @@
+/* styles/CaseStudies.module.css */
+
+.container {
+    padding: 2cm 1cm;
+    background-color: rgb(30, 25, 37);
+}
+
+/* Case Studies */
+
+.caseStudies {
+    padding: 2cm 1cm;
+}
+
+.caseStudiesTitle {
+    color: blueviolet;
+    text-align: center;
+}
+
+.caseStudies h1 {
+    color: white;
+    text-align: center;
+    margin-bottom: 1cm;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 0cm 1.5cm;
+}
+
+.colMd6{
+    color: white;
+}
+
+.colMd6, .colMd5 {
+    flex: 1;
+    max-width: 100%;
+    padding: 1cm;
+    box-sizing: border-box;
+}
+
+.colMd5 img {
+    border-radius: 15px;
+    width: 100%;
+    height: auto;
+    max-width: 600px;
+}
+
+.colMd3 {
+    flex: 1;
+    max-width: 100%;
+    padding: 0cm 0.4cm;
+    text-align: left;
+    margin-bottom: 1cm;
+}
+
+.colMd3 h2 {
+    text-align: left;
+    color: gray;
+}
+
+.colMd3 h4 {
+    text-align: left;
+    color: white;
+}
+
+.colMd3 hr {
+    color: gray;
+}
+
+.colMd3 a {
+    text-decoration: none;
+}
+
+.colMd3 h2:hover {
+    color: rgb(170, 223, 46);
+}
+
+.caseStudyLink {
+    text-decoration: none;
+    color: gray;
+}
+
+.caseStudyLink.active {
+    color: rgb(170, 223, 46);
+}
+
+.caseStudyLink h2 {
+    display: inline-block;
+    margin: 0;
+}
+
+.caseStudyLink h2.active {
+    color: green;
+}
+
+/* Responsive Styles */
+
+@media (max-width: 768px) {
+    .caseStudies {
+        padding: 2cm 1cm;
+    }
+
+    .row {
+        padding: 1cm 1cm;
+    }
+
+    .colMd5 img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 576px) {
+    .caseStudies {
+        padding: 1cm 0.5cm;
+    }
+
+    .caseStudies h6 {
+        margin-left: 0.1cm;
+    }
+
+    .row {
+        padding: 1cm 0.5cm;
+    }
+
+    .colMd5 img {
+        width: 8cm;
+        height: 5cm;
+        margin-left: -1cm;
+    }
+
+    .colMd3 {
+        margin-top: -1cm;
+    }
+
+    .caseStudyLink {
+        padding: 0cm 2.5cm;
+    }
+}
+
+/* Subscribe */
+
+.subscribeBox {
+    background-color: #15022e;
+    background-image: url("https://angular.envytheme.com/tanus/assets/images/bg-images/bg-shape3.png");
+    border: 1px solid #ddd;
+    padding: 1cm 1cm;
+    margin: 3cm 6cm;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(154, 15, 235, 0.1);
+}
+
+.subscribe .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.subscribe .colMd4 {
+    flex: 1;
+    max-width: 100%;
+    padding: 1cm;
+    box-sizing: border-box;
+}
+
+.subscribe .colMd8 {
+    flex: 2;
+    max-width: 100%;
+    padding: 1cm;
+    text-align: left;
+}
+
+.subscribe .colMd8 input {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #15022e;
+    height: 1.5cm;
+    width: 100%;
+    margin-top: 0.5cm;
+}
+
+.subscribe .colMd8 button {
+    background-color: rgb(55, 9, 107);
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    height: 1.55cm;
+    width: auto;
+    color: white;
+    margin-top: 0.5cm;
+}
+
+.subscribe .colMd8 button:hover {
+    background-color: white;
+    color: #15022e;
+}
+
+.subscribe .colMd8 h1 {
+    color: #7000d9;
+}
+
+.subscribe .colMd8 h3 {
+    color: white;
+}
+
+/* Medium screens (tablets, 768px and up) */
+
+@media (max-width: 992px) {
+    .subscribeBox {
+        margin: 2cm 3cm;
+        padding: 1cm 0.5cm;
+    }
+
+    .subscribe .colMd8 input {
+        width: 100%;
+    }
+
+    .subscribe .colMd8 button {
+        width: auto;
+    }
+}
+
+/* Extra small screens (less than 576px) */
+
+@media (max-width: 576px) {
+    .subscribeBox {
+        margin: 0.5cm 0.5cm;
+        padding: 0.5cm 0.5cm;
+    }
+
+    .subscribe .colMd8 input {
+        width: 8cm;
+        height: 1.5cm;
+    }
+
+    .subscribe .colMd8 button {
+        width: 3.5cm;
+        height: 1.2cm;
+        margin-left: 0;
+        margin-top: 0.5cm;
+    }
+}

@@ -1,0 +1,41 @@
+/* styles/Navbar.module.css */
+
+.navbar {
+    padding: 20px 25px;
+    background-image: url(https://angular.envytheme.com/tanus/assets/images/banners/banner-bg2.jpg);
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Ensure navbar is above other content */
+  }
+  
+  .nav-link {
+    color: white;
+    font-size: large;
+  }
+  
+  .nav-link:hover {
+    text-decoration: none;
+    color: rgb(18, 39, 163);
+  }
+  
+  .nav-item1 {
+    margin-top: 0.2cm;
+  }
+  
+  .nav-link1 {
+    color: white;
+    font-size: large;
+    border: 1px solid white;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    padding: 0.3cm 0.5cm;
+    margin-top: 0.5cm;
+    margin-bottom: 1cm;
+  }
+  
+  .nav-link1:hover {
+    text-decoration: none;
+    background-color: rgb(65, 21, 187);
+  }
+  

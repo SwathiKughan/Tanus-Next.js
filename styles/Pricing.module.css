@@ -1,0 +1,167 @@
+/* Pricing.module.css */
+
+.container {
+    margin-bottom: 2cm;
+    background-image: url("https://angular.envytheme.com/tanus/assets/images/bg-images/bg-shape7.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgb(30, 25, 37);
+}
+
+.container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ddd;
+    
+}
+
+.pricing-plans {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-left: 2cm;
+    margin-right: 2cm;
+}
+
+.box-plan {
+    background-color: #11022e;
+    border: 1px solid white;
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(154, 15, 235, 0.1);
+    height: fit-content;
+    padding: 30px;
+    text-align: center;
+    flex: 1;
+    color: #ddd;
+    width: 8cm;
+    margin: 10px;
+}
+
+.plan h2 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.plan .price {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 0.5cm;
+}
+
+.plan .price span {
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.plan .features ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.plan .features h5 {
+    font-size: 16px;
+    margin-left: -1cm;
+}
+
+.plan .features li {
+    font-size: smaller;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.get-button {
+    padding-left: 2.5cm;
+    margin-top: -1cm;
+}
+
+.plan .features li::before {
+    content: '•';
+    color: #007bff;
+    margin-right: 5px;
+}
+
+.plan .button {
+    background-color: #000000;
+    color: #fff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.plan .button:hover {
+    background-color: #7000d9;
+}
+
+/* Media Queries */
+@media (max-width: 992px) {
+    .pricing-plans {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .box-plan {
+        width: 90%;
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        margin-bottom: 1cm;
+    }
+
+    .box-plan {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .plan .price {
+        font-size: 36px;
+    }
+
+    .plan .price span {
+        font-size: 16px;
+    }
+
+    .plan .features li {
+        font-size: smaller;
+    }
+
+    .get-button {
+        padding-left: 1cm;
+        margin-top: 1cm;
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        margin-bottom: 1cm;
+    }
+
+    .box-plan {
+        width: 100%;
+        margin: 10px 0;
+        padding: 20px;
+    }
+
+    .plan .price {
+        font-size: 32px;
+    }
+
+    .plan .price span {
+        font-size: 14px;
+    }
+
+    .plan .features li {
+        font-size: smaller;
+    }
+
+    .get-button {
+        padding-left: 0;
+        text-align: center;
+        margin-top: -1cm;
+    }
+}

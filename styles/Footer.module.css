@@ -1,0 +1,155 @@
+/* components/Footer.module.css */
+.footer {
+    padding: 2cm 4cm;
+  }
+  
+  .footerContent {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .footerSection {
+    flex: 1;
+    min-width: 250px;
+    margin-bottom: 1cm;
+  }
+  
+  .footerSection h3 {
+    color: white;
+    margin-bottom: 0.5cm;
+  }
+  
+  .footerSection h6 {
+    color: grey;
+    margin-bottom: 0.2cm;
+  }
+  
+  .icon {
+    color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px;
+  }
+  
+  .footerPart {
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 10px;
+    margin: 1cm 5cm;
+    background-color: #15022e;
+    text-align: center;
+    padding: 0.6cm 0.4cm;
+  }
+  
+  .footerPart h6 {
+    margin: 0;
+    color: gray;
+  }
+  
+  .footerPart h6 b {
+    color: white;
+  }
+  
+  .footerPart h6 span {
+    color: blueviolet;
+  }
+  
+  .footerPart .footerLinks a {
+    color: white;
+    text-decoration: none;
+    margin-left: 10px;
+  }
+  
+  /* Media queries for responsiveness */
+  @media (max-width: 992px) {
+    .footer {
+      padding: 2cm 2cm;
+    }
+  
+    .footerContent {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .footerSection {
+      margin-bottom: 1cm;
+      text-align: center;
+    }
+  
+    .footerPart {
+      margin: 1cm 2cm;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .footer {
+      padding: 1cm 1cm;
+    }
+  
+    .footerSection {
+      margin-bottom: 0.5cm;
+    }
+  
+    .footerPart {
+      margin: 1cm 1cm;
+      padding: 0.5cm;
+    }
+  
+    .footerPart h6 {
+      font-size: 0.9em;
+    }
+  
+    .footerPart .footerLinks a {
+      margin: 0 5px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .footer {
+      padding: 1cm 1.5cm;
+    }
+  
+    .footerContent {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .footerSection {
+      margin-bottom: 0.5cm;
+      text-align: center;
+    }
+  
+    .footerPart {
+      margin: 0.5cm 0.5cm;
+      padding: 0.4cm;
+    }
+  
+    .footerPart h6 {
+      font-size: 0.8em;
+    }
+  
+    .footerPart .footerLinks a {
+      margin: 0 3px;
+    }
+  }
+  
+  /* Email and phone span styles */
+  .email {
+    color: blueviolet;
+  }
+  
+  .phone {
+    color: blueviolet;
+  }
+  
+  .brand {
+    color: white;
+  }
+  
+  .theme {
+    color: blueviolet;
+  }
+  

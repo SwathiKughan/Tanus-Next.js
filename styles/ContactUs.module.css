@@ -1,0 +1,107 @@
+/* styles/ContactUs.module.css */
+
+
+  /* Contact */
+  .contactUsContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 100px;
+  background-color: rgb(30, 25, 37);
+  color: white;
+}
+
+/* Text Section */
+.textSection {
+  max-width: 500px;
+  padding: 50px;
+  text-align: left;
+}
+
+.textSection h5 {
+  color: blueviolet;
+  margin-bottom: 10px;
+}
+
+.textSection h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.textSection h2 {
+  color: #ff9933;
+  font-size: 1.5em;
+}
+
+/* Form Section */
+.formSection {
+  
+  background-image: url("https://angular.envytheme.com/tanus/assets/images/contact-bg2.jpg");
+  padding: 2cm;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(154, 15, 235, 0.1);
+  width: 600px;
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.formGroup {
+  margin-bottom: 1em;
+}
+
+.formGroup label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5em;
+}
+
+.formGroup .icon {
+  margin-right: 0.5em;
+}
+
+.formGroup input,
+.formGroup textarea {
+  width: 100%;
+  padding: 0.5em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.formGroup .inputContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.buttonContainer {
+  text-align: center;
+}
+
+.buttonContainer button {
+  padding: 0.5em 1em;
+  background-color: blueviolet;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.buttonContainer button:hover {
+  background-color: #9932CC;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .contactUsContainer {
+    flex-direction: column;
+    padding: 50px;
+  }
+
+  .textSection, .formSection {
+    max-width: 100%;
+    padding: 20px;
+  }
+}

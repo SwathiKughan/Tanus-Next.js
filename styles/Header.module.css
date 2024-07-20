@@ -1,0 +1,102 @@
+/* styles/Header.module.css */
+
+.landingPage {
+    background-image: url("https://angular.envytheme.com/tanus/assets/images/banners/banner-bg2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 50px; /* Adjust padding for overall spacing */
+  }
+  
+  .textCol {
+    color: white;
+    padding: 5cm 1cm; /* Adjust padding for the text column */
+    text-align: left; /* Center align text on smaller screens */
+  }
+  
+  .textCol h1 {
+    font-size: 60px;
+    text-align: left;
+  }
+  
+  .textCol h5 {
+    text-align: left; /* Center align text on smaller screens */
+    color: #9b9b9b;
+  }
+  
+  .round-border i {
+    padding: 0.5cm 1cm;
+    margin-left: -1cm;
+  }
+  
+  .imgCol img {
+    width: 100%; /* Ensure image takes full width */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Ensure image is block-level */
+    margin-top: 1cm; /* Add space between text and image */
+    margin-left: 1cm;
+  }
+  
+  .textCol .free-trial a {
+    border: 1px solid rgb(109, 25, 189);
+    color: white;
+    border-radius: 10px;
+    background-color: rgb(109, 25, 189);
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px; /* Add space between text and button */
+  }
+  
+  .textCol .free-trial a:hover {
+    background-color: white;
+    color: rgb(109, 25, 189);
+  }
+  
+  /* Media Queries for Responsiveness */
+  @media (max-width: 768px) {
+    .textCol {
+      padding: 2cm 1cm; /* Reduce padding for smaller screens */
+      text-align: center; /* Center align text on smaller screens */
+    }
+  
+    .imgCol img {
+      margin-left: 0; /* Remove left margin on smaller screens */
+      margin-top: 1cm; /* Adjust top margin */
+    }
+  
+    .free-trial a {
+      margin-top: 10px; /* Reduce top margin for smaller screens */
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .textCol {
+      margin-top: 2cm;
+      text-align: left;
+    }
+  
+    .textCol h1, .textCol h5, .textCol h6 {
+      margin-left: -1cm;
+    }
+  
+    .free-trial {
+      margin-left: -3cm;
+    }
+  
+    .round-border i {
+      margin-left: -3cm;
+      padding: 0.2cm 1cm;
+      text-align: left;
+    }
+  
+    .textCol h1 {
+      font-size: 34px;
+      text-align: left;
+    }
+  
+    .imgCol img {
+      margin-left: -1cm;
+      margin-top: -8cm;
+    }
+  }
+  

@@ -1,0 +1,94 @@
+/* Article.module.css */
+
+/* General Styles */
+.articleBox {
+    background-color: #15022e;
+    background-image: url("https://angular.envytheme.com/tanus/assets/images/bg-images/bg-shape3.png");
+    border: 1px solid #ddd;
+    padding: 1cm 1cm;
+    margin-left: 3cm;
+    margin-right: 3cm;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(154, 15, 235, 0.1);
+}
+
+.articles {
+    padding: 0.5cm 1cm;
+}
+
+.articles img {
+    width: 10cm;
+    height: 6cm;
+    border-radius: 20px;
+    margin-bottom: 0.5cm;
+    margin-top: 1cm;
+}
+
+.articles h1, .articles h5 {
+    text-align: center;
+    color: white;
+}
+
+.articles h4 {
+    color: white;
+    margin-top: 0.2cm;
+}
+
+/* Medium screens (tablets, 768px and up) */
+@media (max-width: 992px) {
+    .articleBox {
+        margin-left: 2cm;
+        margin-right: 2cm;
+    }
+
+    .articles img {
+        width: 8cm;
+        height: 5cm;
+    }
+}
+
+/* Small screens (mobiles, 576px and up) */
+@media (max-width: 768px) {
+    .articleBox {
+        margin-left: 1cm;
+        margin-right: 1cm;
+    }
+
+    .articles img {
+        width: 100%;
+        height: auto;
+    }
+
+    .articles h1 {
+        font-size: 1.5em;
+    }
+
+    .articles h4 {
+        font-size: 1em;
+    }
+}
+
+/* Extra small screens (less than 576px) */
+@media (max-width: 576px) {
+    .articleBox {
+        margin-left: 0.5cm;
+        margin-right: 0.5cm;
+    }
+
+    .articles img {
+        width: 100%;
+        height: auto;
+    }
+
+    .articles h1 {
+        font-size: 1.2em;
+    }
+
+    .articles h4 {
+        font-size: 0.9em;
+    }
+
+    .articles h6 {
+        margin-left: 0.1cm;
+    }
+}

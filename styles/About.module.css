@@ -1,0 +1,219 @@
+/* About Page */
+.about {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-image: url(https://angular.envytheme.com/tanus/assets/images/bg-images/bg-shape5.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 2cm;
+    background-color: rgb(30, 25, 37);
+}
+
+.about .texting-col {
+    padding-left: 4cm;
+    padding-top: 2cm;
+    padding-bottom: 3cm;
+    color: white;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.about .texting-col h4{
+    color: white;
+}
+
+.about .text2-col {
+    padding-top: 2cm;
+    padding-bottom: 3cm;
+    color: white;
+    margin-right: 1cm;
+}
+
+.why {
+    text-align: center;
+    color: white;
+    padding: 2rem;
+}
+
+.whyTitle {
+    color: white;
+    font-size: 2rem;
+}
+
+.highlight {
+    color: blueviolet;
+}
+
+.invSol {
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    padding: 1.5cm;
+    margin-top: 1cm;
+    margin-left: 5cm;
+    margin-right: 5cm;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+    color: white;
+}
+.invSol {
+    background-image: url(https://angular.envytheme.com/tanus/assets/images/shapes/shape5.png);
+    background-size: cover;
+    background-attachment: fixed;
+    border-radius: 10px;
+    padding: 1.5cm;
+    margin-top: 1cm;
+    margin-left: 5cm;
+    margin-right: 5cm;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+    color: white;
+}
+
+.invSol h4 {
+    flex: 1;
+}
+
+.invSol img {
+    height: 3cm;
+    width: 3cm;
+    margin-left: 6cm;
+}
+
+.invSol p {
+    flex: 2;
+    margin-left: 5cm;
+}
+
+@media (max-width: 750px) {
+    .invSol {
+        flex-direction: column;
+        padding: 1cm;
+        margin-left: 2cm;
+        margin-right: 2cm;
+        text-align: center;
+    }
+
+    .invSol img {
+        margin: 1cm 0;
+        height: 2.5cm;
+        width: 2.5cm;
+    }
+
+    .invSol p {
+        margin-left: 0;
+    }
+
+    .whyTitle {
+        color: white;
+        font-size: 2rem;
+        text-align: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .invSol {
+        padding: 0.5cm;
+        margin-left: 0.5cm;
+        margin-right: 1cm;
+        width: 8cm;
+    }
+
+    .invSol h4 {
+        font-size: 1.2rem;
+    }
+
+    .invSol img {
+        height: 2cm;
+        width: 2cm;
+    }
+
+    .invSol p {
+        font-size: 0.9rem;
+    }
+
+    .whyTitle {
+        color: white;
+        font-size: 20px;
+        text-align: center;
+        margin-left: 1cm;
+    }
+}
+
+.video {
+    position: relative;
+    display: inline-block;
+    border-radius: 10%;
+    overflow: hidden;
+    padding: 2cm 8cm;
+    padding-bottom: 0cm;
+}
+
+.video img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 35px solid;
+    border-color: rgb(26, 6, 48);
+    border-radius: 15px;
+    position: relative;
+    z-index: 2;
+    box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+    .texting-col,
+    .text2-col {
+        padding-left: 2cm;
+        padding-right: 2cm;
+        text-align: center;
+    }
+
+    .texting-col img {
+        margin-left: -0.6cm;
+    }
+}
+
+@media (max-width: 576px) {
+    .about{
+        margin-right: 0.6cm;
+    }
+
+    .about{
+        margin-right: 0.6cm;
+        font-size: 17px;
+    }
+
+    .texting-col,
+    .text2-col {
+        padding-left: 0.5cm;
+        padding-right: 0.5cm;
+        padding-top: 0.5cm;
+        padding-bottom: 1cm;
+        margin-left: 1cm;
+    }
+
+    .texting-col img {
+        margin-left: -0.4cm;
+    }
+
+    .texting-col,
+    .text2-col h5 {
+        font-size: 14px;
+    }
+
+    .sliderText {
+        width: 100%;
+        right: -0.25cm;
+    }
+
+    .video {
+        padding: 1cm 1cm;
+        align-items: center;
+        margin-left: 0.5cm;
+    }
+}
