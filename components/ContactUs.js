@@ -1,68 +1,67 @@
 "use client";
-import { useEffect } from 'react';
-import Image from 'next/image'; // Import Image component
+import { useEffect, useState } from 'react';
+import Image from 'next/image';
 import styles from '../styles/ContactUs.module.css';
 
 export default function ContactUs() {
+  const [style, setStyle] = useState({
+    articleBoxMargin: '3cm',
+    articleBoxPadding: '0',
+    imgWidth: '10cm',
+    imgHeight: '6cm',
+    h1FontSize: 'inherit',
+    h4FontSize: 'inherit',
+    textSectionH1FontSize: '2.5em',
+    textSectionH2FontSize: '1.5em',
+  });
+
   useEffect(() => {
     const handleResize = () => {
       const width = window.innerWidth;
-      const articleBox = document.querySelector('.articleBox');
-      const images = document.querySelectorAll('.articles img');
-      const h1 = document.querySelector('.articles h1');
-      const h4s = document.querySelectorAll('.articles h4');
-
-      if (articleBox) {
-        if (width <= 576) {
-          articleBox.style.marginLeft = '0.5cm';
-          articleBox.style.marginRight = '0.5cm';
-          articleBox.style.padding = '1cm';
-          images.forEach(img => {
-            img.style.width = '100%';
-            img.style.height = 'auto';
-          });
-          h1.style.fontSize = '1.2em';
-          h4s.forEach(h4 => h4.style.fontSize = '0.9em');
-        } else if (width <= 768) {
-          articleBox.style.marginLeft = '1cm';
-          articleBox.style.marginRight = '1cm';
-          images.forEach(img => {
-            img.style.width = '100%';
-            img.style.height = 'auto';
-          });
-          h1.style.fontSize = '1.5em';
-          h4s.forEach(h4 => h4.style.fontSize = '1em');
-        } else if (width <= 992) {
-          articleBox.style.marginLeft = '2cm';
-          articleBox.style.marginRight = '2cm';
-          images.forEach(img => {
-            img.style.width = '8cm';
-            img.style.height = '5cm';
-          });
-        } else {
-          articleBox.style.marginLeft = '3cm';
-          articleBox.style.marginRight = '3cm';
-          images.forEach(img => {
-            img.style.width = '10cm';
-            img.style.height = '6cm';
-          });
-          h1.style.fontSize = 'inherit';
-          h4s.forEach(h4 => h4.style.fontSize = 'inherit');
-        }
-      }
-
-      const textSectionH1 = document.querySelector(`.${styles.textSection} h1`);
-      const textSectionH2 = document.querySelector(`.${styles.textSection} h2`);
-      
       if (width <= 576) {
-        textSectionH1.style.fontSize = '1.5em';
-        textSectionH2.style.fontSize = '1em';
+        setStyle({
+          articleBoxMargin: '0.5cm',
+          articleBoxPadding: '1cm',
+          imgWidth: '100%',
+          imgHeight: 'auto',
+          h1FontSize: '1.2em',
+          h4FontSize: '0.9em',
+          textSectionH1FontSize: '1.5em',
+          textSectionH2FontSize: '1em'
+        });
       } else if (width <= 768) {
-        textSectionH1.style.fontSize = '2em';
-        textSectionH2.style.fontSize = '1.2em';
+        setStyle({
+          articleBoxMargin: '1cm',
+          articleBoxPadding: '0',
+          imgWidth: '100%',
+          imgHeight: 'auto',
+          h1FontSize: '1.5em',
+          h4FontSize: '1em',
+          textSectionH1FontSize: '2em',
+          textSectionH2FontSize: '1.2em'
+        });
+      } else if (width <= 992) {
+        setStyle({
+          articleBoxMargin: '2cm',
+          articleBoxPadding: '0',
+          imgWidth: '8cm',
+          imgHeight: '5cm',
+          h1FontSize: 'inherit',
+          h4FontSize: 'inherit',
+          textSectionH1FontSize: '2.5em',
+          textSectionH2FontSize: '1.5em'
+        });
       } else {
-        textSectionH1.style.fontSize = '2.5em';
-        textSectionH2.style.fontSize = '1.5em';
+        setStyle({
+          articleBoxMargin: '3cm',
+          articleBoxPadding: '0',
+          imgWidth: '10cm',
+          imgHeight: '6cm',
+          h1FontSize: 'inherit',
+          h4FontSize: 'inherit',
+          textSectionH1FontSize: '2.5em',
+          textSectionH2FontSize: '1.5em'
+        });
       }
     };
 
@@ -76,10 +75,10 @@ export default function ContactUs() {
 
   return (
     <div className={styles.contactUsContainer}>
-      <div className={styles.textSection}>
+      <div className={styles.textSection} style={{ fontSize: style.textSectionH1FontSize }}>
         <h5>GET IN TOUCH</h5>
-        <h1>Let&apos;s work together <br />just drop me an email</h1>
-        <h2>hello@tanus.com</h2>
+        <h1 style={{ fontSize: style.textSectionH1FontSize }}>Let&apos;s work together <br />just drop me an email</h1>
+        <h2 style={{ fontSize: style.textSectionH2FontSize }}>hello@tanus.com</h2>
       </div>
       <div className={styles.formSection}>
         <form className={styles.contactForm}>

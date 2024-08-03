@@ -1,57 +1,56 @@
 "use client";
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import styles from '../styles/Article.module.css';
 
-export default function Articles() {
+const Articles = () => {
+  const [style, setStyle] = useState({
+    articleBoxMargin: '3cm',
+    articleBoxPadding: '0',
+    imgWidth: '10cm',
+    imgHeight: '6cm',
+    h1FontSize: 'inherit',
+    h4FontSize: 'inherit'
+  });
+
   useEffect(() => {
     const handleResize = () => {
       const width = window.innerWidth;
-      const articleBox = document.querySelector(`.${styles.articleBox}`);
-      const images = document.querySelectorAll(`.${styles.articles} img`);
-      const h1 = document.querySelector(`.${styles.articles} h1`);
-      const h4s = document.querySelectorAll(`.${styles.articles} h4`);
-
       if (width <= 576) {
-        articleBox.style.marginLeft = '0.5cm';
-        articleBox.style.marginRight = '0.5cm';
-        articleBox.style.padding = '1cm';
-        images.forEach(img => {
-          img.style.width = '100%';
-          img.style.height = 'auto';
-        });
-        h1.style.fontSize = '1.2em';
-        h4s.forEach(h4 => {
-          h4.style.fontSize = '0.9em';
+        setStyle({
+          articleBoxMargin: '0.5cm',
+          articleBoxPadding: '1cm',
+          imgWidth: '100%',
+          imgHeight: 'auto',
+          h1FontSize: '1.2em',
+          h4FontSize: '0.9em'
         });
       } else if (width <= 768) {
-        articleBox.style.marginLeft = '1cm';
-        articleBox.style.marginRight = '1cm';
-        images.forEach(img => {
-          img.style.width = '100%';
-          img.style.height = 'auto';
-        });
-        h1.style.fontSize = '1.5em';
-        h4s.forEach(h4 => {
-          h4.style.fontSize = '1em';
+        setStyle({
+          articleBoxMargin: '1cm',
+          articleBoxPadding: '0',
+          imgWidth: '100%',
+          imgHeight: 'auto',
+          h1FontSize: '1.5em',
+          h4FontSize: '1em'
         });
       } else if (width <= 992) {
-        articleBox.style.marginLeft = '2cm';
-        articleBox.style.marginRight = '2cm';
-        images.forEach(img => {
-          img.style.width = '8cm';
-          img.style.height = '5cm';
+        setStyle({
+          articleBoxMargin: '2cm',
+          articleBoxPadding: '0',
+          imgWidth: '8cm',
+          imgHeight: '5cm',
+          h1FontSize: 'inherit',
+          h4FontSize: 'inherit'
         });
       } else {
-        articleBox.style.marginLeft = '3cm';
-        articleBox.style.marginRight = '3cm';
-        images.forEach(img => {
-          img.style.width = '10cm';
-          img.style.height = '6cm';
-        });
-        h1.style.fontSize = 'inherit';
-        h4s.forEach(h4 => {
-          h4.style.fontSize = 'inherit';
+        setStyle({
+          articleBoxMargin: '3cm',
+          articleBoxPadding: '0',
+          imgWidth: '10cm',
+          imgHeight: '6cm',
+          h1FontSize: 'inherit',
+          h4FontSize: 'inherit'
         });
       }
     };
@@ -65,10 +64,10 @@ export default function Articles() {
   }, []);
 
   return (
-    <div className={styles.articleBox}>
+    <div className={styles.articleBox} style={{ marginLeft: style.articleBoxMargin, marginRight: style.articleBoxMargin, padding: style.articleBoxPadding }}>
       <div className={styles.articles}>
         <h5 style={{ color: 'blueviolet' }}>ARTICLES</h5>
-        <h1>Articles and news from AI Chatbot</h1>
+        <h1 style={{ fontSize: style.h1FontSize }}>Articles and news from AI Chatbot</h1>
         <div className="row">
           <div className="col-md-4">
             <Image 
@@ -76,9 +75,10 @@ export default function Articles() {
               alt="Article 1" 
               width={600} 
               height={400} 
+              style={{ width: style.imgWidth, height: style.imgHeight }}
             />
             <h6 style={{ color: 'white', fontSize: 'small' }}>13 Dec, 2024/by: Tanus</h6>
-            <a><h4>How chatbots are changing the digital landscape</h4></a>
+            <a><h4 style={{ fontSize: style.h4FontSize }}>How chatbots are changing the digital landscape</h4></a>
           </div>
           <div className="col-md-4">
             <Image 
@@ -86,9 +86,10 @@ export default function Articles() {
               alt="Article 2" 
               width={600} 
               height={400} 
+              style={{ width: style.imgWidth, height: style.imgHeight }}
             />
             <h6 style={{ color: 'white', fontSize: 'small' }}>13 Dec, 2024/by: Tanus</h6>
-            <a><h4>Trends and innovations in chatbot technology</h4></a>
+            <a><h4 style={{ fontSize: style.h4FontSize }}>Trends and innovations in chatbot technology</h4></a>
           </div>
           <div className="col-md-4">
             <Image 
@@ -96,12 +97,15 @@ export default function Articles() {
               alt="Article 3" 
               width={600} 
               height={400} 
+              style={{ width: style.imgWidth, height: style.imgHeight }}
             />
             <h6 style={{ color: 'white', fontSize: 'small' }}>13 Dec, 2024/by: Tanus</h6>
-            <a><h4>Demystifying natural language processing in Chatbots</h4></a>
+            <a><h4 style={{ fontSize: style.h4FontSize }}>Demystifying natural language processing in Chatbots</h4></a>
           </div>
         </div>
       </div>
     </div>
   );
-}
+};
+
+export default Articles;

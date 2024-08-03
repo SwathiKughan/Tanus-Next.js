@@ -1,50 +1,57 @@
 "use client"; // If you use client-side specific code
 
-// components/Footer.js
-import { useEffect } from 'react';
-import Image from 'next/image'; // Import Image component
+import { useEffect, useState } from 'react';
+import Image from 'next/image';
 import styles from '../styles/Footer.module.css'; // Import CSS module for scoped styles
 
 const Footer = () => {
+  const [style, setStyle] = useState({
+    footerPadding: '2cm 4cm',
+    footerPartMargin: '1cm 5cm',
+    footerPartPadding: '0',
+  });
+
   useEffect(() => {
     const adjustFooterStyles = () => {
-      const footer = document.querySelector(`.${styles.footer}`);
-      const footerPart = document.querySelector(`.${styles.footerPart}`);
       const screenWidth = window.innerWidth;
-
-      if (footer && footerPart) {
-        if (screenWidth < 576) {
-          footer.style.padding = '1cm 0.5cm';
-          footerPart.style.margin = '0.5cm 0.5cm';
-          footerPart.style.padding = '0.4cm';
-        } else if (screenWidth < 768) {
-          footer.style.padding = '1cm 1cm';
-          footerPart.style.margin = '1cm 1cm';
-          footerPart.style.padding = '0.5cm';
-        } else if (screenWidth < 992) {
-          footer.style.padding = '2cm 2cm';
-          footerPart.style.margin = '1cm 2cm';
-        } else {
-          footer.style.padding = '2cm 4cm';
-          footerPart.style.margin = '1cm 5cm';
-        }
+      if (screenWidth < 576) {
+        setStyle({
+          footerPadding: '1cm 0.5cm',
+          footerPartMargin: '0.5cm 0.5cm',
+          footerPartPadding: '0.4cm',
+        });
+      } else if (screenWidth < 768) {
+        setStyle({
+          footerPadding: '1cm 1cm',
+          footerPartMargin: '1cm 1cm',
+          footerPartPadding: '0.5cm',
+        });
+      } else if (screenWidth < 992) {
+        setStyle({
+          footerPadding: '2cm 2cm',
+          footerPartMargin: '1cm 2cm',
+          footerPartPadding: '0',
+        });
+      } else {
+        setStyle({
+          footerPadding: '2cm 4cm',
+          footerPartMargin: '1cm 5cm',
+          footerPartPadding: '0',
+        });
       }
     };
 
-    // Run the function on page load and on window resize
-    window.addEventListener('load', adjustFooterStyles);
+    adjustFooterStyles(); // Run on component mount
     window.addEventListener('resize', adjustFooterStyles);
 
-    // Clean up event listeners on component unmount
     return () => {
-      window.removeEventListener('load', adjustFooterStyles);
       window.removeEventListener('resize', adjustFooterStyles);
     };
   }, []);
 
   return (
     <>
-      <div className={styles.footer}>
+      <div className={styles.footer} style={{ padding: style.footerPadding }}>
         <div className={styles.footerContent}>
           <div className={styles.footerSection}>
             <Image
@@ -75,7 +82,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className={styles.footerPart}>
+      <div className={styles.footerPart} style={{ margin: style.footerPartMargin, padding: style.footerPartPadding }}>
         <h6>
           ©<b className={styles.brand}>Tanus</b> All Rights Reserved by <span className={styles.theme}>EnvyTheme</span>
           <span className={styles.footerLinks}>

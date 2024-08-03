@@ -1,32 +1,44 @@
 "use client"; // If you use client-side specific code
 
-// app/Header.js
-
-import React, { useEffect } from 'react';
-import Image from 'next/image'; // Import Image component from Next.js
+import React, { useEffect, useState } from 'react';
+import Image from 'next/image';
 import styles from '../styles/Header.module.css'; // Import CSS module for styling
 
 const Header = () => {
-  useEffect(() => {
-    const textCol = document.querySelector('.col-md-5');
-    const imgCol = document.querySelector('.img-col img');
+  const [layoutStyle, setLayoutStyle] = useState({
+    textColPadding: '5cm 1cm',
+    textColTextAlign: 'left',
+    imgColMarginLeft: '1cm',
+    imgColMarginTop: '1cm'
+  });
 
-    // Function to handle screen resizing
-    function handleResize() {
-      if (window.innerWidth < 768) { // Bootstrap's md breakpoint
-        textCol.style.padding = '2cm 1cm';
-        textCol.style.textAlign = 'center';
-        imgCol.style.marginLeft = '0';
-        imgCol.style.marginTop = '1cm';
-      } else if (window.innerWidth < 576) { // Bootstrap's sm breakpoint
-        textCol.style.padding = '1cm 1cm';
+  useEffect(() => {
+    const handleResize = () => {
+      const screenWidth = window.innerWidth;
+
+      if (screenWidth < 576) { // Bootstrap's sm breakpoint
+        setLayoutStyle({
+          textColPadding: '1cm 1cm',
+          textColTextAlign: 'center',
+          imgColMarginLeft: '0',
+          imgColMarginTop: '1cm'
+        });
+      } else if (screenWidth < 768) { // Bootstrap's md breakpoint
+        setLayoutStyle({
+          textColPadding: '2cm 1cm',
+          textColTextAlign: 'center',
+          imgColMarginLeft: '0',
+          imgColMarginTop: '1cm'
+        });
       } else {
-        textCol.style.padding = '5cm 1cm';
-        textCol.style.textAlign = 'left';
-        imgCol.style.marginLeft = '1cm';
-        imgCol.style.marginTop = '1cm';
+        setLayoutStyle({
+          textColPadding: '5cm 1cm',
+          textColTextAlign: 'left',
+          imgColMarginLeft: '1cm',
+          imgColMarginTop: '1cm'
+        });
       }
-    }
+    };
 
     // Initial check
     handleResize();
@@ -43,8 +55,8 @@ const Header = () => {
   return (
     <div className={styles.landingPage}>
       <div className="row">
-        <div className={`col-md-5 ${styles.textCol}`}>
-          <h6 style={{ textAlign: 'left' }}>AI CONTACT CENTER</h6>
+        <div className={`col-md-5 ${styles.textCol}`} style={{ padding: layoutStyle.textColPadding, textAlign: layoutStyle.textColTextAlign }}>
+          <h6>AI CONTACT CENTER</h6>
           <h1>Your Intelligent Chat Companion</h1>
           <h5>Transforming Conversations, Simplifying Interactions</h5><br />
           <div className="free-trial">
@@ -56,7 +68,7 @@ const Header = () => {
             <i className="fa fa-check-square">&emsp;Cancel at any time</i>
           </div>
         </div>
-        <div className={`col-md-7 img-col ${styles.imgCol}`}><br /><br /><br />
+        <div className={`col-md-7 ${styles.imgCol}`} style={{ marginLeft: layoutStyle.imgColMarginLeft, marginTop: layoutStyle.imgColMarginTop }}><br /><br /><br />
           <Image 
             src="/assets/images/banners/banner1.png" 
             alt="Banner" 
