@@ -6,6 +6,7 @@
     justify-content: space-between;
     padding: 2rem 4rem;
     color: white;
+    background-color: rgb(30,25,37);
   }
   
   .col {
@@ -42,7 +43,7 @@
     padding: 5rem 6rem;
     color: white;
     align-items: center;
-    
+    background-color: rgb(30,25,37);
   }
   
   .accordion1 h1{
@@ -50,7 +51,10 @@
     margin-bottom: 2cm;
     align-items: center;
   }
-  
+  .accordion1 h5{
+    margin-bottom: 2cm;
+    align-items: center;
+  }
   .accordion-button {
     padding: 0.6cm 0.5cm;
     font-size: large;

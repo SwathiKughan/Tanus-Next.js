@@ -1,4 +1,4 @@
-
+import Image from 'next/image';
 import styles from '../styles/About.module.css';
 
 const About = () => {
@@ -6,11 +6,14 @@ const About = () => {
         <div className={styles.about} id="about">
             <div className="row">
                 <div className="col-md-5 texting-col">
-                    <img
-                        src="https://angular.envytheme.com/tanus/assets/images/icons/robot.svg"
+                    <Image
+                        src="/assets/images/icons/robot.svg"
+                        alt="Robot icon"
+                        width={100}
+                        height={100}
                         style={{ display: 'inline-block', marginLeft: '2cm' }}
                     />
-                    <h4 style={{ display: 'inline-block', verticalAlign: 'middle' , color: 'white' , flexWrap: 'wrap' , marginLeft: '2cm'}}>
+                    <h4 style={{ display: 'inline-block', verticalAlign: 'middle', color: 'white', flexWrap: 'wrap', marginLeft: '2cm' }}>
                         A FEW WORDS ABOUT US AND OUR CHATBOT
                     </h4>
                     <div className="social">
@@ -37,7 +40,13 @@ const About = () => {
                 </h5>
                 <div className={styles.invSol}>
                     <h4>Innovative Solutions</h4>
-                    <img src="https://angular.envytheme.com/tanus/assets/images/shapes/shape2.svg" className={styles.invImg} />
+                    <Image
+                        src="/assets/images/shapes/shape2.svg"
+                        alt="Innovative Solutions"
+                        width={100}
+                        height={100}
+                        className={styles.invImg}
+                    />
                     <p>
                         We pride ourselves on delivering solutions that go beyond expectations, fueled by a spirit
                         of innovation that permeates everything we do.
@@ -45,7 +54,13 @@ const About = () => {
                 </div>
                 <div className={styles.invSol}>
                     <h4>Reliability</h4>
-                    <img src="https://angular.envytheme.com/tanus/assets/images/shapes/shape3.svg" className={styles.invImg} />
+                    <Image
+                        src="/assets/images/shapes/shape3.svg"
+                        alt="Reliability"
+                        width={100}
+                        height={100}
+                        className={styles.invImg}
+                    />
                     <p>
                         Trust is the foundation of our relationships. We are committed to delivering reliable,
                         robust, and secure solutions that our clients can depend on.
@@ -53,24 +68,42 @@ const About = () => {
                 </div>
                 <div className={styles.invSol}>
                     <h4>Customer-Centric Approach</h4>
-                    <img src="https://angular.envytheme.com/tanus/assets/images/shapes/shape4.svg" className={styles.invImg} />
+                    <Image
+                        src="/assets/images/shapes/shape4.svg"
+                        alt="Customer-Centric Approach"
+                        width={100}
+                        height={100}
+                        className={styles.invImg}
+                    />
                     <p>
                         Your success is our success. Our customer-centric approach ensures that your needs are at
                         the forefront of our solutions, from inception to implementation.
                     </p>
                 </div>
             </div>
-
-            <img
-                src="https://angular.envytheme.com/tanus/assets/images/shapes/slider-text.svg"
+            <div className={styles.sliderText}>
+            <Image
+                src="/assets/images/shapes/slider-text.svg"
+                alt="Slider Text"
                 className={styles.sliderText}
                 style={{ position: 'relative' }}
+                width={1700}
+                height={300}
             />
+            </div>
+            
             <div className={styles.video}>
-                <img src="https://angular.envytheme.com/tanus/assets/images/videos/video2.jpg" />
+                <Image
+                    src="/assets/images/videos/video2.jpg"
+                    alt="Video Thumbnail"
+                    width={800}
+                    height={300}
+                    
+                />
             </div>
         </div>
     );
 };
 
 export default About;
+

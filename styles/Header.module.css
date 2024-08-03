@@ -1,102 +1,107 @@
 /* styles/Header.module.css */
 
 .landingPage {
-    background-image: url("https://angular.envytheme.com/tanus/assets/images/banners/banner-bg2.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    padding: 50px; /* Adjust padding for overall spacing */
+  background-image: url("https://angular.envytheme.com/tanus/assets/images/banners/banner-bg2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 50px; /* Adjust padding for overall spacing */
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Center vertically */
+  justify-content: space-between; /* Space between text and image */
+}
+
+.textCol {
+  color: white;
+  padding: 5cm 1cm; /* Adjust padding for the text column */
+  text-align: left; /* Align text to the left */
+  flex: 1; /* Allow text column to take available space */
+}
+
+.textCol h1 {
+  font-size: 60px;
+  margin: 0; /* Remove default margin */
+}
+
+.textCol h5 {
+  margin: 10px 0; /* Adjust margin for spacing */
+  color: #9b9b9b;
+}
+
+.round-border i {
+  display: block; /* Ensure icons are block-level */
+  padding: 0.5cm 1cm;
+  margin-left: -1cm;
+}
+
+.imgCol {
+  flex: 1; /* Allow image column to take available space */
+  display: flex;
+  justify-content: flex-end; /* Align image to the right */
+}
+
+.imgCol img {
+  max-width: 100%; /* Ensure image does not overflow */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Ensure image is block-level */
+  margin-top: 0; /* Remove top margin */
+}
+
+.defaultButton {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: white;
+  text-decoration: none;
+  background-color: rgb(91, 20, 206);
+  margin-top: 10px;
+}
+
+.defaultButton:hover {
+  background-color: white;
+  color: #17022e;
+}
+
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .landingPage {
+    flex-direction: column; /* Stack text and image vertically */
+    padding: 2cm 1cm; /* Adjust padding for smaller screens */
   }
-  
+
   .textCol {
-    color: white;
-    padding: 5cm 1cm; /* Adjust padding for the text column */
-    text-align: left; /* Center align text on smaller screens */
+    text-align: center; /* Center align text on smaller screens */
+    padding: 2cm 1cm; /* Adjust padding */
   }
-  
-  .textCol h1 {
-    font-size: 60px;
-    text-align: left;
+
+  .imgCol {
+    margin-top: 1cm; /* Add space above image */
+    justify-content: center; /* Center image horizontally */
   }
-  
-  .textCol h5 {
-    text-align: left; /* Center align text on smaller screens */
-    color: #9b9b9b;
-  }
-  
-  .round-border i {
-    padding: 0.5cm 1cm;
-    margin-left: -1cm;
-  }
-  
+
   .imgCol img {
-    width: 100%; /* Ensure image takes full width */
-    height: auto; /* Maintain aspect ratio */
-    display: block; /* Ensure image is block-level */
-    margin-top: 1cm; /* Add space between text and image */
-    margin-left: 1cm;
+    max-width: 100%; /* Ensure image fits within container */
+    margin-left: 0; /* Remove left margin */
   }
-  
-  .textCol .free-trial a {
-    border: 1px solid rgb(109, 25, 189);
-    color: white;
-    border-radius: 10px;
-    background-color: rgb(109, 25, 189);
-    display: inline-block;
-    padding: 10px 20px;
-    margin-top: 20px; /* Add space between text and button */
+
+  .free-trial a {
+    margin-top: 10px; /* Reduce top margin for smaller screens */
   }
-  
-  .textCol .free-trial a:hover {
-    background-color: white;
-    color: rgb(109, 25, 189);
+}
+
+@media (max-width: 576px) {
+  .textCol {
+    padding: 1cm; /* Reduce padding for very small screens */
   }
-  
-  /* Media Queries for Responsiveness */
-  @media (max-width: 768px) {
-    .textCol {
-      padding: 2cm 1cm; /* Reduce padding for smaller screens */
-      text-align: center; /* Center align text on smaller screens */
-    }
-  
-    .imgCol img {
-      margin-left: 0; /* Remove left margin on smaller screens */
-      margin-top: 1cm; /* Adjust top margin */
-    }
-  
-    .free-trial a {
-      margin-top: 10px; /* Reduce top margin for smaller screens */
-    }
+
+  .textCol h1 {
+    font-size: 34px; /* Adjust font size for small screens */
   }
-  
-  @media (max-width: 576px) {
-    .textCol {
-      margin-top: 2cm;
-      text-align: left;
-    }
-  
-    .textCol h1, .textCol h5, .textCol h6 {
-      margin-left: -1cm;
-    }
-  
-    .free-trial {
-      margin-left: -3cm;
-    }
-  
-    .round-border i {
-      margin-left: -3cm;
-      padding: 0.2cm 1cm;
-      text-align: left;
-    }
-  
-    .textCol h1 {
-      font-size: 34px;
-      text-align: left;
-    }
-  
-    .imgCol img {
-      margin-left: -1cm;
-      margin-top: -8cm;
-    }
+
+  .round-border i {
+    margin-left: 0; /* Adjust margin */
+    padding: 0.2cm 1cm; /* Adjust padding */
+    text-align: center; /* Center align text */
   }
-  
+}

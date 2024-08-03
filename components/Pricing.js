@@ -1,4 +1,3 @@
-// pages/Pricing.js
 "use client";
 import React, { useEffect } from 'react';
 import styles from '../styles/Pricing.module.css';
@@ -7,8 +6,8 @@ const Pricing = () => {
   useEffect(() => {
     const handleResize = () => {
       const width = window.innerWidth;
-      const container = document.querySelector('.container');
-      const plans = document.querySelectorAll('.box-plan');
+      const container = document.querySelector(`.${styles.container}`);
+      const plans = document.querySelectorAll(`.${styles['box-plan']}`);
 
       if (width <= 576) {
         container.style.marginBottom = '1cm';
@@ -29,7 +28,6 @@ const Pricing = () => {
           plan.style.margin = '10px 0';
         });
       } else {
-        
         plans.forEach(plan => {
           plan.style.width = '8cm';
           plan.style.margin = '10px';
@@ -48,7 +46,7 @@ const Pricing = () => {
 
   return (
     <section className={styles.container} id="pricing">
-      <div className="pricing">
+      <div className={styles.pricing}>
         <h5 style={{ color: 'white', textAlign: 'center' }}>PRICING <span style={{ color: 'blueviolet' }}>PLAN</span></h5>
         <h1>Pick the perfect pricing plan</h1>
         <div className={styles['pricing-plans']}>

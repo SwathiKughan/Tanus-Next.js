@@ -1,0 +1,9 @@
+<svg width="100" height="101" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M100 25.5779V0.577883L50 0.577881V45.568C49.9947 31.7654 38.8038 0.577883 25 0.577883H1.09279e-06V50.5779H45C31.1929 50.5779 -6.0353e-07 61.7709 0 75.5779L1.09279e-06 100.578H50V55.5779C50 69.3849 61.193 100.578 75 100.578H100V50.5779H55.01C68.8125 50.5725 100 39.3817 100 25.5779Z" fill="url(#paint0_radial_65_195)"/>
+<defs>
+<radialGradient id="paint0_radial_65_195" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(44.125 48.9529) rotate(51.9977) scale(49.3346 88.5962)">
+<stop stop-color="#FF81DC"/>
+<stop offset="1" stop-color="#FFACE8"/>
+</radialGradient>
+</defs>
+</svg>

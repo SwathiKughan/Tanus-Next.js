@@ -1,8 +1,8 @@
 "use client"; // If you use client-side specific code
 
-
 // components/Footer.js
 import { useEffect } from 'react';
+import Image from 'next/image'; // Import Image component
 import styles from '../styles/Footer.module.css'; // Import CSS module for scoped styles
 
 const Footer = () => {
@@ -47,7 +47,13 @@ const Footer = () => {
       <div className={styles.footer}>
         <div className={styles.footerContent}>
           <div className={styles.footerSection}>
-            <img src="https://angular.envytheme.com/tanus/assets/images/logo2.svg" alt="Logo" /><br /><br />
+            <Image
+              src="https://angular.envytheme.com/tanus/assets/images/logo2.svg"
+              alt="Logo"
+              width={100} // Adjust width and height as needed
+              height={50} // Adjust width and height as needed
+            />
+            <br /><br />
             <a href="#"><i className={`fa fa-facebook-official fa-2x ${styles.icon}`}></i></a>&emsp;
             <a href="#"><i className={`fa fa-xing-square fa-2x ${styles.icon}`}></i></a>&emsp;
             <a href="#"><i className={`fa fa-linkedin-square fa-2x ${styles.icon}`}></i></a>&emsp;

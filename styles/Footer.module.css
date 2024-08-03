@@ -1,6 +1,7 @@
 /* components/Footer.module.css */
 .footer {
     padding: 2cm 4cm;
+    background-color: rgb(30, 25, 37);
   }
   
   .footerContent {
@@ -16,6 +17,7 @@
     flex: 1;
     min-width: 250px;
     margin-bottom: 1cm;
+    background-color: rgb(30, 25, 37);
   }
   
   .footerSection h3 {

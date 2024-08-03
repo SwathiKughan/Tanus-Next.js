@@ -1,4 +1,4 @@
-// components/Benefits.js
+import Image from 'next/image';
 import styles from '../styles/Benefits.module.css';
 
 const Benefits = () => {
@@ -11,7 +11,13 @@ const Benefits = () => {
                         <h2 className={styles.fwNormal}><b>Advantages of using AI chatbots, emphasizing how they can save time</b></h2>
                         <a className={styles.defaultButton} href="#">Start your free trial</a>
                         <div className={styles.image}>
-                            <img src="https://angular.envytheme.com/tanus/assets/images/features/feature11.png" alt="Benefits" />
+                            <Image 
+                                src="/assets/images/features/feature11.png" 
+                                alt="Benefits" 
+                                width={300} 
+                                height={250} 
+                                
+                            />
                         </div>
                     </div>
                 </div>
@@ -19,7 +25,12 @@ const Benefits = () => {
                     <div className={styles.benefitsList}>
                         <div className={`${styles.item} ${styles.dFlex} ${styles.alignItemsCenter}`}>
                             <div className={`${styles.icon} ${styles.positionRelative} ${styles.roundedCircle} ${styles.flexShrink0}`}>
-                                <img src="https://angular.envytheme.com/tanus/assets/images/icons/instant-message.svg" alt="Instant Response" />
+                                <Image 
+                                    src="/assets/images/icons/instant-message.svg" 
+                                    alt="Instant Response" 
+                                    width={64} 
+                                    height={64} 
+                                />
                             </div>
                             <div className={styles.flexGrow1}>
                                 <h3>Instant Response</h3>
@@ -28,7 +39,12 @@ const Benefits = () => {
                         </div>
                         <div className={`${styles.item} ${styles.dFlex} ${styles.alignItemsCenter}`}>
                             <div className={`${styles.icon} ${styles.positionRelative} ${styles.roundedCircle} ${styles.flexShrink0}`}>
-                                <img src="https://angular.envytheme.com/tanus/assets/images/icons/hour-clock.svg" alt="24/7 Availability" />
+                                <Image 
+                                    src="/assets/images/icons/hour-clock.svg" 
+                                    alt="24/7 Availability" 
+                                    width={64} 
+                                    height={64} 
+                                />
                             </div>
                             <div className={styles.flexGrow1}>
                                 <h3>24/7 Availability</h3>
@@ -37,7 +53,12 @@ const Benefits = () => {
                         </div>
                         <div className={`${styles.item} ${styles.dFlex} ${styles.alignItemsCenter}`}>
                             <div className={`${styles.icon} ${styles.positionRelative} ${styles.roundedCircle} ${styles.flexShrink0}`}>
-                                <img src="https://angular.envytheme.com/tanus/assets/images/icons/automation.svg" alt="Task Automation" />
+                                <Image 
+                                    src="/assets/images/icons/automation.svg" 
+                                    alt="Task Automation" 
+                                    width={64} 
+                                    height={64} 
+                                />
                             </div>
                             <div className={styles.flexGrow1}>
                                 <h3>Task Automation</h3>
@@ -46,7 +67,12 @@ const Benefits = () => {
                         </div>
                         <div className={`${styles.item} ${styles.dFlex} ${styles.alignItemsCenter}`}>
                             <div className={`${styles.icon} ${styles.positionRelative} ${styles.roundedCircle} ${styles.flexShrink0}`}>
-                                <img src="https://angular.envytheme.com/tanus/assets/images/icons/saving-money.svg" alt="Cost Savings" />
+                                <Image 
+                                    src="/assets/images/icons/saving-money.svg" 
+                                    alt="Cost Savings" 
+                                    width={64} 
+                                    height={64} 
+                                />
                             </div>
                             <div className={styles.flexGrow1}>
                                 <h3>Cost Savings</h3>
@@ -61,4 +87,3 @@ const Benefits = () => {
 };
 
 export default Benefits;
-

@@ -1,6 +1,7 @@
 // pages/about.js
 
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Navbar from '../components/Navbar';
 import Header from '../components/Header'; 
 import Partner from '../components/Partner';
 import About from '../components/About';
@@ -21,7 +22,7 @@ import Articles from '../components/Articles';
 const Tanus = () => {
     return (
         <div>
-            
+            < Navbar />
             < Header />
             < Partner />
             < About />

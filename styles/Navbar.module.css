@@ -7,35 +7,41 @@
     top: 0;
     z-index: 1000; /* Ensure navbar is above other content */
   }
-  
-  .nav-link {
+
+
+  .defaultButton {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
     color: white;
-    font-size: large;
-  }
-  
-  .nav-link:hover {
     text-decoration: none;
-    color: rgb(18, 39, 163);
-  }
+    background-color: rgb(91, 20, 206);
+    margin-top: 10px;
+}
+
+.defaultButton:hover {
+    background-color: white;
+    color: #17022e;
+}
   
   .nav-item1 {
     margin-top: 0.2cm;
   }
   
-  .nav-link1 {
+  .defaultButton1  {
     color: white;
     font-size: large;
-    border: 1px solid white;
+    
     color: white;
-    border-radius: 5px;
+    
     text-decoration: none;
     padding: 0.3cm 0.5cm;
     margin-top: 0.5cm;
     margin-bottom: 1cm;
   }
   
-  .nav-link1:hover {
+  .defaultButton1:hover {
     text-decoration: none;
-    background-color: rgb(65, 21, 187);
+    color: rgb(65, 21, 187);
   }
   

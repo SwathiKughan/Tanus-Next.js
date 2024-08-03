@@ -3,6 +3,7 @@
     display: flex;
     justify-content: center;
     padding: 2rem;
+    background-color:rgb(30, 25, 37);
 }
 
 .row {

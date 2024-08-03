@@ -37,7 +37,9 @@
 /* Form Section */
 .formSection {
   
-  background-image: url("https://angular.envytheme.com/tanus/assets/images/contact-bg2.jpg");
+  background-image: url("https://angular.envytheme.com/tanus/assets/images/shapes/shape5.png");
+  background-repeat: no-repeat;
+  background-size: cover;
   padding: 2cm;
   border-radius: 10px;
   box-shadow: 0 0 20px rgba(154, 15, 235, 0.1);

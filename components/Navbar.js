@@ -3,9 +3,8 @@
 // components/Navbar.js
 
 import React, { useEffect } from 'react';
+import Image from 'next/image'; // Import Image component from Next.js
 import styles from '../styles/Navbar.module.css'; // Import CSS module for styling
-
-
 
 const Navbar = () => {
   useEffect(() => {
@@ -53,37 +52,51 @@ const Navbar = () => {
   return (
     <nav className={`navbar navbar-expand-lg navbar-light ${styles.navbar}`}>
       <a className="navbar-brand" href="#" style={{ color: 'white' }}>
-        <img src="https://angular.envytheme.com/tanus/assets/images/logo2.svg" alt="Logo" width="110" height="50" className="d-inline-block align-text-top" />
+        <Image
+          src="https://angular.envytheme.com/tanus/assets/images/logo2.svg"
+          alt="Logo"
+          width={110}
+          height={50}
+          className="d-inline-block align-text-top"
+        />
       </a>
-      <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <button
+        className="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
         <span className="navbar-toggler-icon"></span>
       </button>
-      
+
       <div className={`collapse navbar-collapse ${styles.navbarCollapse}`} id="navbarNav">
         <ul className={`navbar-nav ms-auto ${styles.navbarNav}`}>
           <li className="nav-item">
-            <a className={`nav-link`} aria-current="page" href="#">Home</a>
+            <a className={styles.defaultButton1} aria-current="page" href="#">Home</a>
           </li>&emsp;
           <li className="nav-item">
-            <a className={`nav-link`} href="#about">About Us</a>
+            <a className={styles.defaultButton1} href="#about">About Us</a>
           </li>&emsp;
           <li className="nav-item">
-            <a className={`nav-link`} href="#features">Features</a>
+            <a className={styles.defaultButton1} href="#features">Features</a>
           </li>&emsp;
           <li className="nav-item">
-            <a className={`nav-link`} href="#pricing">Pricing</a>
+            <a className={styles.defaultButton1} href="#pricing">Pricing</a>
           </li>&emsp;
           <li className="nav-item">
-            <a className={`nav-link`} href="#testimonials">Testimonials</a>
+            <a className={styles.defaultButton1} href="#testimonials">Testimonials</a>
           </li>&emsp;
           <li className="nav-item">
-            <a className={`nav-link`} href="#article-box">Blog</a>
+            <a className={styles.defaultButton1} href="#article-box">Blog</a>
           </li>&emsp;
           <li className="nav-item">
-            <a className={`nav-link`} href="#contact">Contact Us</a>
+            <a className={styles.defaultButton1} href="#contact">Contact Us</a>
           </li>&emsp;
           <li className="nav-item1">
-            <a className={`nav-link1 ${styles.navLink1}`} href="#pricing">Get Started</a>
+            <a className={styles.defaultButton} href="#pricing">Get Started</a>
           </li>
         </ul>
       </div>
@@ -92,4 +105,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-

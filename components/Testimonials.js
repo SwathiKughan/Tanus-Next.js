@@ -1,5 +1,4 @@
-// components/Testimonials.js
-
+import Image from 'next/image';
 import styles from '../styles/Testimonials.module.css';
 
 const Testimonials = () => {
@@ -14,7 +13,13 @@ const Testimonials = () => {
             <div className={styles.testimonials}>
                 <div className={styles.testimonial}>
                     <div className={styles.testimonialHeader}>
-                        <img src="https://angular.envytheme.com/tanus/assets/images/users/user15.jpg" alt="Virginia King" />
+                        <Image 
+                            src="/assets/images/users/user15.jpg" 
+                            alt="Virginia King" 
+                            width={60} 
+                            height={60} 
+                            className={styles.testimonialImage}
+                        />
                         <div>
                             <h3>VIRGINIA KING</h3>
                             <p>Operations</p>
@@ -31,7 +36,13 @@ const Testimonials = () => {
                 </div>
                 <div className={styles.testimonial}>
                     <div className={styles.testimonialHeader}>
-                        <img src="https://angular.envytheme.com/tanus/assets/images/users/user16.jpg" alt="Vera Brown" />
+                        <Image 
+                            src="/assets/images/users/user16.jpg" 
+                            alt="Vera Brown" 
+                            width={60} 
+                            height={60} 
+                            className={styles.testimonialImage}
+                        />
                         <div>
                             <h3>VERA BROWN</h3>
                             <p>Community Lead</p>
@@ -48,7 +59,13 @@ const Testimonials = () => {
                 </div>
                 <div className={styles.testimonial}>
                     <div className={styles.testimonialHeader}>
-                        <img src="https://angular.envytheme.com/tanus/assets/images/users/user14.jpg" alt="Kara Lewis" />
+                        <Image 
+                            src="/assets/images/users/user14.jpg" 
+                            alt="Kara Lewis" 
+                            width={60} 
+                            height={60} 
+                            className={styles.testimonialImage}
+                        />
                         <div>
                             <h3>KARA LEWIS</h3>
                             <p>CEO & CO-Founder</p>

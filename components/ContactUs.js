@@ -1,12 +1,13 @@
 "use client";
 import { useEffect } from 'react';
+import Image from 'next/image'; // Import Image component
 import styles from '../styles/ContactUs.module.css';
 
 export default function ContactUs() {
   useEffect(() => {
-      const handleResize = () => {
-          const width = window.innerWidth;
-          const articleBox = document.querySelector('.articleBox');
+    const handleResize = () => {
+      const width = window.innerWidth;
+      const articleBox = document.querySelector('.articleBox');
       const images = document.querySelectorAll('.articles img');
       const h1 = document.querySelector('.articles h1');
       const h4s = document.querySelectorAll('.articles h4');
@@ -73,9 +74,8 @@ export default function ContactUs() {
     };
   }, []);
 
-    return (
-        <div className={styles.contactUsContainer}>
-            
+  return (
+    <div className={styles.contactUsContainer}>
       <div className={styles.textSection}>
         <h5>GET IN TOUCH</h5>
         <h1>Let's work together <br />just drop me an email</h1>

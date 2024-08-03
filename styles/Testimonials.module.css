@@ -1,5 +1,9 @@
 /* styles/Testimonials.module.css */
 
+#testimonials{
+    background-color:rgb(30, 25, 37) ;
+}
+
 .testimonialSection {
     text-align: center;
     padding: 2cm 5cm;

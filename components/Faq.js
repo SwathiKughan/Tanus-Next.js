@@ -1,6 +1,6 @@
-// pages/faq.js
 "use client";
 import React, { useEffect } from 'react';
+import Image from 'next/image';
 import styles from '../styles/Faq.module.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 
@@ -77,6 +77,8 @@ const Faq = () => {
       }
     };
 
+    handleResize(); // Initial call to set styles on component mount
+
     window.addEventListener('resize', handleResize);
 
     return () => {
@@ -87,8 +89,8 @@ const Faq = () => {
   return (
     <div>
       {/* Chatbot Integrations Section */}
-      <div className={styles.row2}>
-        <div className={`${styles.col} ${styles.textContent}`}>
+      <div className={`${styles.row2} row-2`}>
+        <div className={`${styles.col} ${styles.textContent} text-content`}>
           <h5 style={{ color: 'white' }}>CHATBOT <span style={{ color: 'blueviolet' }}>INTEGRATIONS</span></h5>
           <h1>Connect Chatbot with your favorite tools and apps</h1>
           <br />
@@ -98,13 +100,18 @@ const Faq = () => {
           </div>
           <h5>Free 14 Day Trial. No Credit Card Required.</h5>
         </div>
-        <div className={`${styles.col} ${styles.imageContent}`}>
-          <img src="https://angular.envytheme.com/tanus/assets/images/integrations.png" alt="Integrations" />
+        <div className={`${styles.col} ${styles.imageContent} image-content`}>
+          <Image 
+            src="/assets/images/integrations.png" 
+            alt="Integrations" 
+            width={600} 
+            height={400} 
+          />
         </div>
       </div>
 
       {/* FAQs Section */}
-      <div className={styles.accordion1}>
+      <div className={`${styles.accordion1} accordion1`}>
         <h5>FAQS</h5>
         <h1>Frequently asked questions (FAQs) for Chatbot platform</h1>
         <div className="accordion" id="accordionFlush">

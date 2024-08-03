@@ -1,26 +1,26 @@
-// pages/caseStudies.js
 "use client";
 import { useState } from 'react';
+import Image from 'next/image';
 import styles from '../styles/CaseStudies.module.css';
 
 const CaseStudies = () => {
-    const [currentImage, setCurrentImage] = useState("https://angular.envytheme.com/tanus/assets/images/case-studies/case-study1.jpg");
+    const [currentImage, setCurrentImage] = useState("/assets/images/casestudies/case-study1.jpg");
     const [activeLink, setActiveLink] = useState("01");
 
     const changeImage = (id) => {
         let newImageSrc = "";
         switch (id) {
             case "01":
-                newImageSrc = "https://angular.envytheme.com/tanus/assets/images/case-studies/case-study1.jpg";
+                newImageSrc = "/assets/images/casestudies/case-study1.jpg";
                 break;
             case "02":
-                newImageSrc = "https://angular.envytheme.com/tanus/assets/images/case-studies/case-study2.jpg";
+                newImageSrc = "/assets/images/casestudies/case-study2.jpg";
                 break;
             case "03":
-                newImageSrc = "https://angular.envytheme.com/tanus/assets/images/case-studies/case-study3.jpg";
+                newImageSrc = "/assets/images/casestudies/case-study3.jpg";
                 break;
             case "04":
-                newImageSrc = "https://angular.envytheme.com/tanus/assets/images/case-studies/case-study4.jpg";
+                newImageSrc = "/assets/images/casestudies/case-study4.jpg";
                 break;
             default:
                 break;
@@ -39,12 +39,25 @@ const CaseStudies = () => {
                     <div className={styles.colMd6}>
                         <h6>Industry</h6>
                         <h4>Technology</h4>
-                        <img src="https://angular.envytheme.com/tanus/assets/images/icons/vector.svg" className={styles.vectorImage} />
+                        <Image 
+                            src="/assets/images/icons/vector.svg" 
+                            alt="Vector"
+                            width={60} 
+                            height={60} 
+                            className={styles.vectorImage} 
+                        />
                         <h2>How <span>Tanus</span> chatbot transformed Jonath Collard support services</h2>
                         <p>A brief introduction to the case study, highlighting the challenges faced by the client and the transformative solutions provided by your chatbot.</p>
                     </div>
                     <div className={styles.colMd5}>
-                        <img id="case-study-image" src={currentImage} className={styles.caseStudyImage} />
+                        <Image 
+                            id="case-study-image" 
+                            src={currentImage} 
+                            alt="Case Study" 
+                            width={500} 
+                            height={500} 
+                            className={styles.caseStudyImage} 
+                        />
                     </div>
                 </div>
                 <div className={styles.row}>
@@ -70,7 +83,12 @@ const CaseStudies = () => {
                 <div className={styles.subscribe}>
                     <div className={styles.row}>
                         <div className={styles.colMd4}>
-                            <img src="https://angular.envytheme.com/tanus/assets/images/community.png" />
+                            <Image 
+                                src="/assets/images/community.png" 
+                                alt="Community"
+                                width={400} 
+                                height={300} 
+                            />
                         </div>
                         <div className={styles.colMd8}>
                             <h1>Join Our Growing <span>Community</span></h1>

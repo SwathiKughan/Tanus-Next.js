@@ -3,6 +3,7 @@
 // app/Header.js
 
 import React, { useEffect } from 'react';
+import Image from 'next/image'; // Import Image component from Next.js
 import styles from '../styles/Header.module.css'; // Import CSS module for styling
 
 const Header = () => {
@@ -47,7 +48,7 @@ const Header = () => {
           <h1>Your Intelligent Chat Companion</h1>
           <h5>Transforming Conversations, Simplifying Interactions</h5><br />
           <div className="free-trial">
-            <a className="nav-link" href="#">Start your free trial</a><br />
+            <a className={styles.defaultButton} href="#">Start your free trial</a>
           </div>
           <div className="round-border"><br />
             <i className="fa fa-check-square">&emsp;No Credit Card Required</i>
@@ -56,7 +57,13 @@ const Header = () => {
           </div>
         </div>
         <div className={`col-md-7 img-col ${styles.imgCol}`}><br /><br /><br />
-          <img src="https://angular.envytheme.com/tanus/assets/images/banners/banner1.png" alt="Banner" />
+          <Image 
+            src="/assets/images/banners/banner1.png" 
+            alt="Banner" 
+            layout="responsive" 
+            width={1200} // Adjust width as needed
+            height={800} // Adjust height as needed
+          />
         </div>
       </div>
     </div>
@@ -64,4 +71,3 @@ const Header = () => {
 };
 
 export default Header;
-

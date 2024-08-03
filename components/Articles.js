@@ -1,5 +1,6 @@
 "use client";
 import { useEffect } from 'react';
+import Image from 'next/image';
 import styles from '../styles/Article.module.css';
 
 export default function Articles() {
@@ -70,17 +71,32 @@ export default function Articles() {
         <h1>Articles and news from AI Chatbot</h1>
         <div className="row">
           <div className="col-md-4">
-            <img src="https://angular.envytheme.com/tanus/assets/images/blogs/blog2.jpg" alt="Article 1" />
+            <Image 
+              src="/assets/images/blogs/blog2.jpg" 
+              alt="Article 1" 
+              width={600} 
+              height={400} 
+            />
             <h6 style={{ color: 'white', fontSize: 'small' }}>13 Dec, 2024/by: Tanus</h6>
             <a><h4>How chatbots are changing the digital landscape</h4></a>
           </div>
           <div className="col-md-4">
-            <img src="https://angular.envytheme.com/tanus/assets/images/blogs/blog3.jpg" alt="Article 2" />
+            <Image 
+              src="/assets/images/blogs/blog3.jpg" 
+              alt="Article 2" 
+              width={600} 
+              height={400} 
+            />
             <h6 style={{ color: 'white', fontSize: 'small' }}>13 Dec, 2024/by: Tanus</h6>
             <a><h4>Trends and innovations in chatbot technology</h4></a>
           </div>
           <div className="col-md-4">
-            <img src="https://angular.envytheme.com/tanus/assets/images/blogs/blog4.jpg" alt="Article 3" />
+            <Image 
+              src="/assets/images/blogs/blog4.jpg" 
+              alt="Article 3" 
+              width={600} 
+              height={400} 
+            />
             <h6 style={{ color: 'white', fontSize: 'small' }}>13 Dec, 2024/by: Tanus</h6>
             <a><h4>Demystifying natural language processing in Chatbots</h4></a>
           </div>
