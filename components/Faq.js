@@ -122,7 +122,7 @@ const Faq = () => {
               </button>
             </h2>
             <div id="flush-collapseOne" className="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlush">
-              <div className="accordion-body">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable Desktop is publishing packages and web page editors now use Lorem Ipsum as their default model text.</div>
+              <div className="accordion-body">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using &apos;Content here, content here&apos;, making it look like readable Desktop is publishing packages and web page editors now use Lorem Ipsum as their default model text.</div>
             </div>
           </div>
           <div className="accordion-item">
@@ -132,7 +132,7 @@ const Faq = () => {
               </button>
             </h2>
             <div id="flush-collapseTwo" className="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlush">
-              <div className="accordion-body">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable Desktop is publishing packages and web page editors now use Lorem Ipsum as their default model text.</div>
+              <div className="accordion-body">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using &apos;Content here, content here&apos;, making it look like readable Desktop is publishing packages and web page editors now use Lorem Ipsum as their default model text.</div>
             </div>
           </div>
           <div className="accordion-item">
@@ -142,7 +142,7 @@ const Faq = () => {
               </button>
             </h2>
             <div id="flush-collapseThree" className="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlush">
-              <div className="accordion-body">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable Desktop is publishing packages and web page editors now use Lorem Ipsum as their default model text.</div>
+              <div className="accordion-body">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using &apos;Content here, content here&apos;, making it look like readable Desktop is publishing packages and web page editors now use Lorem Ipsum as their default model text.</div>
             </div>
           </div>
           <div className="accordion-item">
@@ -152,7 +152,7 @@ const Faq = () => {
               </button>
             </h2>
             <div id="flush-collapseFour" className="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlush">
-              <div className="accordion-body">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable Desktop is publishing packages and web page editors now use Lorem Ipsum as their default model text.</div>
+              <div className="accordion-body">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using &apos;Content here, content here&apos;, making it look like readable Desktop is publishing packages and web page editors now use Lorem Ipsum as their default model text.</div>
             </div>
           </div>
           <div className="accordion-item">
@@ -162,7 +162,7 @@ const Faq = () => {
               </button>
             </h2>
             <div id="flush-collapseFive" className="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlush">
-              <div className="accordion-body">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable Desktop is publishing packages and web page editors now use Lorem Ipsum as their default model text.</div>
+              <div className="accordion-body">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using &apos;Content here, content here&apos;, making it look like readable Desktop is publishing packages and web page editors now use Lorem Ipsum as their default model text.</div>
             </div>
           </div>
           <div className="accordion-item">
@@ -172,7 +172,7 @@ const Faq = () => {
               </button>
             </h2>
             <div id="flush-collapseSix" className="accordion-collapse collapse" aria-labelledby="flush-headingSix" data-bs-parent="#accordionFlush">
-              <div className="accordion-body">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable Desktop is publishing packages and web page editors now use Lorem Ipsum as their default model text.</div>
+              <div className="accordion-body">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using &apos;Content here, content here&apos;, making it look like readable Desktop is publishing packages and web page editors now use Lorem Ipsum as their default model text.</div>
             </div>
           </div>
         </div>

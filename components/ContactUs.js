@@ -78,7 +78,7 @@ export default function ContactUs() {
     <div className={styles.contactUsContainer}>
       <div className={styles.textSection}>
         <h5>GET IN TOUCH</h5>
-        <h1>Let's work together <br />just drop me an email</h1>
+        <h1>Let&apos;s work together <br />just drop me an email</h1>
         <h2>hello@tanus.com</h2>
       </div>
       <div className={styles.formSection}>

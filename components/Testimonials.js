@@ -26,8 +26,8 @@ const Testimonials = () => {
                         </div>
                     </div>
                     <p>
-                        "The user interface is so intuitive; it makes the whole experience effortless. Kudos to the
-                        design team for creating something user-friendly!"
+                        &quot;The user interface is so intuitive; it makes the whole experience effortless. Kudos to the
+                        design team for creating something user-friendly!&quot;
                     </p>
                     <div className={styles.rating}>
                         <span>⭐⭐⭐⭐⭐</span>
@@ -49,8 +49,8 @@ const Testimonials = () => {
                         </div>
                     </div>
                     <p>
-                        "I was skeptical at first, but this product delivers incredible value for the price. It's a
-                        game-changer for anyone in industry."
+                        &quot;I was skeptical at first, but this product delivers incredible value for the price. It&apos;s a
+                        game-changer for anyone in industry.&quot;
                     </p>
                     <div className={styles.rating}>
                         <span>⭐⭐⭐⭐⭐</span>
@@ -72,8 +72,8 @@ const Testimonials = () => {
                         </div>
                     </div>
                     <p>
-                        "The quality of the product is outstanding, and the customer service team goes above and
-                        beyond. I'm a customer for life."
+                        &quot;The quality of the product is outstanding, and the customer service team goes above and
+                        beyond. I&apos;m a customer for life.&quot;
                     </p>
                     <div className={styles.rating}>
                         <span>⭐⭐⭐⭐⭐</span>
