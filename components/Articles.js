@@ -1,9 +1,11 @@
-"use client";
+"use client"; // Indicates client-side rendering
+
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import styles from '../styles/Article.module.css';
 
 const Articles = () => {
+  const [isClient, setIsClient] = useState(false); // State to check if the component is mounted
   const [style, setStyle] = useState({
     articleBoxMargin: '3cm',
     articleBoxPadding: '0',
@@ -14,6 +16,8 @@ const Articles = () => {
   });
 
   useEffect(() => {
+    setIsClient(true); // Set isClient to true when component mounts
+
     const handleResize = () => {
       const width = window.innerWidth;
       if (width <= 576) {
@@ -55,13 +59,20 @@ const Articles = () => {
       }
     };
 
-    window.addEventListener('resize', handleResize);
-    handleResize();
+    if (isClient) {
+      window.addEventListener('resize', handleResize);
+      handleResize(); // Initial call to set styles on component mount
 
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
+      return () => {
+        window.removeEventListener('resize', handleResize);
+      };
+    }
+  }, [isClient]);
+
+  // Conditional rendering to ensure the component only renders on the client side
+  if (!isClient) {
+    return null; // or a loading spinner
+  }
 
   return (
     <div className={styles.articleBox} style={{ marginLeft: style.articleBoxMargin, marginRight: style.articleBoxMargin, padding: style.articleBoxPadding }}>

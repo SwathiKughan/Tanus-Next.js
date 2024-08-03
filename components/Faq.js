@@ -1,4 +1,5 @@
-"use client";
+"use client"; // Indicates client-side rendering
+
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import styles from '../styles/Faq.module.css';
@@ -6,6 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 
 const Faq = () => {
+  const [isClient, setIsClient] = useState(false); // State to check if the component is mounted
   const [style, setStyle] = useState({
     row2Padding: '2cm 4cm',
     row2FlexDirection: 'row',
@@ -21,6 +23,8 @@ const Faq = () => {
   });
 
   useEffect(() => {
+    setIsClient(true); // Set isClient to true when component mounts
+
     const handleResize = () => {
       const width = window.innerWidth;
       if (width <= 576) {
@@ -83,13 +87,17 @@ const Faq = () => {
     };
 
     handleResize(); // Initial call to set styles on component mount
-
     window.addEventListener('resize', handleResize);
 
     return () => {
       window.removeEventListener('resize', handleResize);
     };
   }, []);
+
+  // Conditional rendering to ensure the component only renders on the client side
+  if (!isClient) {
+    return null; // or a loading spinner
+  }
 
   return (
     <div>
@@ -130,7 +138,7 @@ const Faq = () => {
               </h2>
               <div id={`flush-collapse${index + 1}`} className="accordion-collapse collapse" aria-labelledby={`flush-heading${index + 1}`} data-bs-parent="#accordionFlush">
                 <div className="accordion-body" style={{ padding: style.bodyPadding }}>
-                  It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable Desktop is publishing packages and web page editors now use Lorem Ipsum as their default model text.
+                  It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using &apos;Content here, content here&apos;, making it look like readable Desktop is publishing packages and web page editors now use Lorem Ipsum as their default model text.
                 </div>
               </div>
             </div>

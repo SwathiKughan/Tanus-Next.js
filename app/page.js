@@ -6,7 +6,6 @@ import Header from '../components/Header';
 import Partner from '../components/Partner';
 import About from '../components/About';
 import Features from '../components/Features';
-import styles from '../styles/global.css'; // Import the module CSS file
 import Benefits from '../components/Benefits';
 import Testimonials from '../components/Testimonials';
 import CaseStudies from '../components/CaseStudies';
@@ -22,6 +21,7 @@ import Articles from '../components/Articles';
 const Tanus = () => {
     return (
         <div>
+            
             < Navbar />
             < Header />
             < Partner />

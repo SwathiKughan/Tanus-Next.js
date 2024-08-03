@@ -14,17 +14,19 @@ const Navbar = () => {
 
     // Toggle navbar on click
     const handleTogglerClick = () => {
-      navbarCollapse.classList.toggle('show');
+      if (navbarCollapse) {
+        navbarCollapse.classList.toggle('show');
+      }
     };
 
     const handleNavLinkClick = () => {
-      if (navbarCollapse.classList.contains('show')) {
+      if (navbarCollapse && navbarCollapse.classList.contains('show')) {
         navbarCollapse.classList.remove('show');
       }
     };
 
     const handleResize = () => {
-      if (window.innerWidth >= 992) { // Bootstrap's lg breakpoint
+      if (navbarCollapse && window.innerWidth >= 992) { // Bootstrap's lg breakpoint
         navbarCollapse.classList.remove('show');
       }
     };

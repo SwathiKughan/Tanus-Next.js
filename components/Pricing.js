@@ -1,13 +1,16 @@
 "use client";
 
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import styles from '../styles/Pricing.module.css';
 
 const Pricing = () => {
+  const [isClient, setIsClient] = useState(false);
   const containerRef = useRef(null);
   const planRefs = useRef([]);
 
   useEffect(() => {
+    setIsClient(true);
+
     const handleResize = () => {
       const width = window.innerWidth;
       const container = containerRef.current;
@@ -49,6 +52,10 @@ const Pricing = () => {
       window.removeEventListener('resize', handleResize);
     };
   }, []);
+
+  if (!isClient) {
+    return null; // Return nothing while client-side code is not ready
+  }
 
   return (
     <section className={styles.container} ref={containerRef} id="pricing">

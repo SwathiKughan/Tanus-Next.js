@@ -1,10 +1,11 @@
-"use client"; // If you use client-side specific code
+"use client"; // Indicates client-side rendering
 
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import styles from '../styles/Header.module.css'; // Import CSS module for styling
 
 const Header = () => {
+  const [isClient, setIsClient] = useState(false); // State to check if the component is mounted
   const [layoutStyle, setLayoutStyle] = useState({
     textColPadding: '5cm 1cm',
     textColTextAlign: 'left',
@@ -13,6 +14,9 @@ const Header = () => {
   });
 
   useEffect(() => {
+    // Set isClient to true when component mounts
+    setIsClient(true);
+
     const handleResize = () => {
       const screenWidth = window.innerWidth;
 
@@ -51,6 +55,11 @@ const Header = () => {
       window.removeEventListener('resize', handleResize);
     };
   }, []);
+
+  // Conditional rendering to ensure the component only renders on the client side
+  if (!isClient) {
+    return null; // or a loading spinner
+  }
 
   return (
     <div className={styles.landingPage}>

@@ -1,10 +1,11 @@
-"use client"; // If you use client-side specific code
+"use client"; // Indicates client-side rendering
 
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import styles from '../styles/Footer.module.css'; // Import CSS module for scoped styles
 
 const Footer = () => {
+  const [isClient, setIsClient] = useState(false); // State to check if the component is mounted
   const [style, setStyle] = useState({
     footerPadding: '2cm 4cm',
     footerPartMargin: '1cm 5cm',
@@ -12,6 +13,8 @@ const Footer = () => {
   });
 
   useEffect(() => {
+    setIsClient(true); // Set isClient to true when component mounts
+
     const adjustFooterStyles = () => {
       const screenWidth = window.innerWidth;
       if (screenWidth < 576) {
@@ -48,6 +51,11 @@ const Footer = () => {
       window.removeEventListener('resize', adjustFooterStyles);
     };
   }, []);
+
+  // Conditional rendering to ensure the component only renders on the client side
+  if (!isClient) {
+    return null; // or a loading spinner
+  }
 
   return (
     <>
