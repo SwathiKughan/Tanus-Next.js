@@ -25,13 +25,14 @@
 }
 
 .textSection h1 {
-  font-size: 2.5em;
+  font-size: 0.5em;
   margin-bottom: 20px;
 }
 
+
 .textSection h2 {
   color: #ff9933;
-  font-size: 1.5em;
+  font-size: xx-small;
 }
 
 /* Form Section */

@@ -3,6 +3,7 @@ import styles from '../styles/Testimonials.module.css';
 
 const Testimonials = () => {
     return (
+    <div className={styles.testimonials}>
         <div className={styles.testimonialSection} id="testimonials">
             <h5 className={styles.testimonialTitle}>
                 CUSTOMER <span className={styles.testimonialHighlight}>TESTIMONIALS</span>
@@ -80,6 +81,7 @@ const Testimonials = () => {
                         <p>Dec 11, 2024</p>
                     </div>
                 </div>
+            </div>
             </div>
         </div>
     );

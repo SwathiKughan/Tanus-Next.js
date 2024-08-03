@@ -85,7 +85,7 @@ export default function ContactUs() {
   }
 
   return (
-    <div className={styles.contactUsContainer}>
+    <div className={styles.contactUsContainer} id='contact'>
       <div className={styles.textSection} style={{ fontSize: style.textSectionH1FontSize }}>
         <h5>GET IN TOUCH</h5>
         <h1 style={{ fontSize: style.textSectionH1FontSize }}>

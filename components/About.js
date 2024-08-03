@@ -87,7 +87,7 @@ const About = () => {
                 alt="Slider Text"
                 className={styles.sliderText}
                 style={{ position: 'relative' }}
-                width={1700}
+                width={1600}
                 height={300}
             />
             </div>

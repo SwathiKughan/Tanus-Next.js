@@ -89,8 +89,7 @@ const Footer = () => {
             <h6>Saturday and Sunday: Closed</h6>
           </div>
         </div>
-      </div>
-      <div className={styles.footerPart} style={{ margin: style.footerPartMargin, padding: style.footerPartPadding }}>
+        <div className={styles.footerPart} style={{ margin: style.footerPartMargin, padding: style.footerPartPadding }}>
         <h6>
           ©<b className={styles.brand}>Tanus</b> All Rights Reserved by <span className={styles.theme}>EnvyTheme</span>
           <span className={styles.footerLinks}>
@@ -98,6 +97,8 @@ const Footer = () => {
           </span>
         </h6>
       </div>
+      </div>
+      
     </>
   );
 };

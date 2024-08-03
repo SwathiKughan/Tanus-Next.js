@@ -1,6 +1,8 @@
 import dynamic from 'next/dynamic';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+
+
 // Dynamically import components that may require browser-specific APIs
 const Navbar = dynamic(() => import('../components/Navbar'), { ssr: false });
 const Header = dynamic(() => import('../components/Header'), { ssr: false });

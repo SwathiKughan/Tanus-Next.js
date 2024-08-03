@@ -1,0 +1,26 @@
+/* styles/Home.module.css */
+html, body {
+  background-color: rgb(30, 25, 37);
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  height: 100%;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+

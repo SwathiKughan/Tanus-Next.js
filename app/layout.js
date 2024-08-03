@@ -1,4 +1,4 @@
-import '../styles/global.css';
+
 
 import Footer from '../components/Footer';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Bootstrap CSS link

@@ -75,8 +75,8 @@ const Articles = () => {
   }
 
   return (
-    <div className={styles.articleBox} style={{ marginLeft: style.articleBoxMargin, marginRight: style.articleBoxMargin, padding: style.articleBoxPadding }}>
-      <div className={styles.articles}>
+    <div className={styles.articles}>
+      <div className={styles.articleBox} id='article-box' style={{ marginLeft: style.articleBoxMargin, marginRight: style.articleBoxMargin, padding: style.articleBoxPadding }}>
         <h5 style={{ color: 'blueviolet' }}>ARTICLES</h5>
         <h1 style={{ fontSize: style.h1FontSize }}>Articles and news from AI Chatbot</h1>
         <div className="row">

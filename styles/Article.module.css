@@ -5,7 +5,6 @@
     background-color: #15022e;
     background-image: url("https://angular.envytheme.com/tanus/assets/images/bg-images/bg-shape3.png");
     border: 1px solid #ddd;
-    padding: 1cm 1cm;
     margin-left: 3cm;
     margin-right: 3cm;
     border-radius: 10px;
@@ -13,7 +12,8 @@
 }
 
 .articles {
-    padding: 0.5cm 1cm;
+    padding: 2cm 2cm;
+    background-color: rgb(30, 25, 37);
 }
 
 .articles img {
@@ -24,6 +24,14 @@
     margin-top: 1cm;
 }
 
+.articles h5{
+    padding-top: 2cm;
+}
+
+.col-md-4{
+    padding-left: 0.5cm;
+}
+
 .articles h1, .articles h5 {
     text-align: center;
     color: white;
@@ -32,6 +40,8 @@
 .articles h4 {
     color: white;
     margin-top: 0.2cm;
+    padding-bottom: 2cm;
+    padding-left: 0.5cm;
 }
 
 /* Medium screens (tablets, 768px and up) */

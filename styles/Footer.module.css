@@ -11,6 +11,7 @@
     align-items: flex-start;
     max-width: 1200px;
     margin: 0 auto;
+    background-color: rgb(30, 25, 37);
   }
   
   .footerSection {
@@ -47,7 +48,7 @@
   }
   
   .footerPart h6 {
-    margin: 0;
+    margin: 0.5cm 1cm;
     color: gray;
   }
   
